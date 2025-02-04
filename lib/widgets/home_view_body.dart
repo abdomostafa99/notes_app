@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app_practice/widgets/notes_listview_builder.dart';
-import 'package:notes_app_practice/widgets/search_button_widget.dart';
+import 'package:notes_app_practice/widgets/search_bar_row.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({
@@ -16,20 +16,7 @@ class HomeViewBody extends StatelessWidget {
           SizedBox(
             height: 70,
           ),
-          Row(
-            children: [
-              Text(
-                'Notes',
-                style: TextStyle(
-                  fontSize: 28,
-                ),
-              ),
-              Spacer(
-                flex: 1,
-              ),
-              SearchButtonWidget()
-            ],
-          ),
+          SearchRowBar(text: 'Notes', icon: Icon(Icons.search)),
           NotesListViewBuilder()
         ],
       ),
