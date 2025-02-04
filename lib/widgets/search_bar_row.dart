@@ -15,7 +15,7 @@ class SearchRowBar extends StatelessWidget {
     return Row(
       children: [
         Text(
-          'Notes',
+          text,
           style: TextStyle(
             fontSize: 28,
           ),

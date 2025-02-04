@@ -17,7 +17,7 @@ class HomeViewBody extends StatelessWidget {
             height: 70,
           ),
           SearchRowBar(text: 'Notes', icon: Icon(Icons.search)),
-          NotesListViewBuilder()
+          NotesListViewBuilder(),
         ],
       ),
     );

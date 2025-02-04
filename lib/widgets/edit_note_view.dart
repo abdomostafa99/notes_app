@@ -16,13 +16,13 @@ class EditNoteView extends StatelessWidget {
               height: 80,
             ),
             SearchRowBar(
-              text: 'Edit Notes',
+              text: 'Edit Note',
               icon: Icon(Icons.check),
             ),
             SizedBox(
               height: 40,
             ),
-            CustomAddNoteTextField(hintText: 'Edit Note'),
+            CustomAddNoteTextField(hintText: 'Title'),
             SizedBox(
               height: 20,
             ),
