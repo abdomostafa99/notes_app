@@ -6,7 +6,7 @@ import 'package:notes_app_practice/widgets/constants.dart';
 
 part 'add_notes_states.dart';
 
-class AddNotesCubit extends Cubit {
+class AddNotesCubit extends Cubit<AddNotesStates> {
   AddNotesCubit() : super(AddNotesInitial());
 
   addNote(NoteModel note) async {
