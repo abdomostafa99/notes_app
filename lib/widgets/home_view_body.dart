@@ -12,12 +12,12 @@ class HomeViewBody extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 32),
       child: Column(
-        children: [
+        children: const [
           SizedBox(
             height: 70,
           ),
           SearchRowBar(text: 'Notes', icon: Icon(Icons.search)),
-          NotesListViewBuilder(),
+          Expanded(child: NotesListViewBuilder()),
         ],
       ),
     );
