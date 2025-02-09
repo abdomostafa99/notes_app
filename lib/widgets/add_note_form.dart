@@ -49,7 +49,11 @@ class _AddNoteFormState extends State<AddNoteForm> {
             maxLines: 8,
           ),
           SizedBox(
-            height: 30,
+            height: 20,
+          ),
+          ColorsListView(),
+          SizedBox(
+            height: 20,
           ),
           BlocBuilder<AddNotesCubit, AddNotesStates>(
             builder: (context, state) {
@@ -77,6 +81,37 @@ class _AddNoteFormState extends State<AddNoteForm> {
             height: 25,
           ),
         ],
+      ),
+    );
+  }
+}
+
+class ColorsWidget extends StatelessWidget {
+  const ColorsWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const CircleAvatar(
+      radius: 30,
+      backgroundColor: Colors.amber,
+    );
+  }
+}
+
+class ColorsListView extends StatelessWidget {
+  const ColorsListView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 60,
+      child: ListView.builder(
+        physics: BouncingScrollPhysics(),
+        scrollDirection: Axis.horizontal,
+        itemCount: 7,
+        itemBuilder: (context, index) {
+          return ColorsWidget();
+        },
       ),
     );
   }
