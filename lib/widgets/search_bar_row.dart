@@ -5,10 +5,12 @@ class SearchRowBar extends StatelessWidget {
     super.key,
     required this.text,
     required this.icon,
+    this.onPressed,
   });
 
   final String text;
   final Icon icon;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,11 @@ class SearchRowBar extends StatelessWidget {
             color: Colors.white.withValues(alpha: 0.05),
             borderRadius: BorderRadius.circular(16),
           ),
-          child: icon,
+          child: IconButton(
+            onPressed: onPressed,
+            icon: icon,
+            iconSize: 28,
+          ),
         )
       ],
     );

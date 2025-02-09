@@ -15,7 +15,9 @@ class NoteCardItem extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return EditNoteView();
+          return EditNoteView(
+            noteModel: noteModel,
+          );
         }));
       },
       child: Container(
@@ -34,7 +36,7 @@ class NoteCardItem extends StatelessWidget {
               subtitle: Padding(
                 padding: const EdgeInsets.only(top: 16, bottom: 16),
                 child: Text(
-                  noteModel.subTitle,
+                  noteModel.content,
                   style: TextStyle(color: Colors.black.withValues(alpha: 0.7)),
                 ),
               ),
