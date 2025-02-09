@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:notes_app_practice/cubits/add_notes_cubit/add_notes_cubit.dart';
 import 'package:notes_app_practice/models/note_model.dart';
+import 'package:notes_app_practice/widgets/colors_listview.dart';
 import 'package:notes_app_practice/widgets/custom_button.dart';
 import 'package:notes_app_practice/widgets/cutstom_textfield.dart';
 
@@ -81,37 +82,6 @@ class _AddNoteFormState extends State<AddNoteForm> {
             height: 25,
           ),
         ],
-      ),
-    );
-  }
-}
-
-class ColorsWidget extends StatelessWidget {
-  const ColorsWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const CircleAvatar(
-      radius: 30,
-      backgroundColor: Colors.amber,
-    );
-  }
-}
-
-class ColorsListView extends StatelessWidget {
-  const ColorsListView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 60,
-      child: ListView.builder(
-        physics: BouncingScrollPhysics(),
-        scrollDirection: Axis.horizontal,
-        itemCount: 7,
-        itemBuilder: (context, index) {
-          return ColorsWidget();
-        },
       ),
     );
   }
